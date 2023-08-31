@@ -3,7 +3,7 @@ package src.book.ch03;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class exam004_나머지합 {
+public class exam005_나머지합 {
   public static void main(String[] args) throws IOException {
     Scanner sc = new Scanner(System.in);
     int N = sc.nextInt();
