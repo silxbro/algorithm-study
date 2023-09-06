@@ -26,7 +26,6 @@ public class exam051_여행계획짜기 {
     for (int i = 0; i < travelNumber; i++) {    // 여행 도시 정보 저장하기
       travelRoute[i] = sc.nextInt();
     }
-    possible = true;
 
     for (int i = 1; i <= cityNumber; i++) {     // 인접 행렬에서 도시가 연결돼 있으면 union 실행하기
       for (int j = 1; j <= cityNumber; j++) {
