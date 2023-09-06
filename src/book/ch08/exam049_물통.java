@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Queue;
 
 public class exam049_물통 {
-  // 6가지 이동 케이스를 표현하기 위하 ㄴ배열
+  // 6가지 이동 케이스를 표현하기 위한 배열
   static int[] Sender = {0, 0, 1, 1, 2 ,2};
   static int[] Receiver = {1, 2, 0, 2, 0, 1};
   static int[] size = new int[3];
