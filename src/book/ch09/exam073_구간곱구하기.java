@@ -44,7 +44,7 @@ public class exam073_구간곱구하기 {
         num2 = num2 + leftNodeStartIndex;
         System.out.println(getMul(num1, (int)num2));
       }
-      else return
+      else return;
     }
     br.close();
   }
