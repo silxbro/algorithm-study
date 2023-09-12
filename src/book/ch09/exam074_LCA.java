@@ -31,7 +31,7 @@ public class exam074_LCA {
       // 공통 조상을 구할 두 노드
       int nodeA = sc.nextInt();
       int nodeB = sc.nextInt();
-      int LCA = execute(nodeA, nodeB);
+      int LCA = executeLCA(nodeA, nodeB);
       System.out.println(LCA);
     }
   }
@@ -61,7 +61,7 @@ public class exam074_LCA {
       }
     }
   }
-  private static int LCA(int nodeNum1, int nodeNum2) {
+  private static int executeLCA(int nodeNum1, int nodeNum2) {
     if (depth[nodeNum1] < depth[nodeNum2]) {
       int temp = nodeNum1;
       nodeNum1 = nodeNum2;
