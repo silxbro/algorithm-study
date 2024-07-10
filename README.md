@@ -1,2 +1,3 @@
-# algorithm_study
-### - src/book/ : [알고리즘 코딩테스트] 교재 참조
+# algorithm-study
+### - src/book/알고리즘_코딩테스트 : [알고리즘 코딩테스트] 교재 참조
+### - src/book/코딩테스트_합격자_되기 : [코딩테스트 합격자 되기] 교재 참조
