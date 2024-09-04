@@ -1,0 +1,12 @@
+## 🔠 level05 : 문자열
+- #### [[27866] 문자와 문자열](https://www.acmicpc.net/problem/27866)
+- #### [[2743] 단어 길이 재기](https://www.acmicpc.net/problem/2743)
+- #### [[9086] 문자열](https://www.acmicpc.net/problem/9086)
+- #### [[11654] 아스키 코드](https://www.acmicpc.net/problem/11654)
+- #### [[11720] 숫자의 합](https://www.acmicpc.net/problem/11720)
+- #### [[10809] 알파벳 찾기](https://www.acmicpc.net/problem/10809)
+- #### [[2675] 문자열 반복](https://www.acmicpc.net/problem/2675)
+- #### [[1152] 단어의 개수](https://www.acmicpc.net/problem/1152)
+- #### [[2908] 상수](https://www.acmicpc.net/problem/2908)
+- #### [[5622] 다이얼](https://www.acmicpc.net/problem/5622)
+- #### [[11718] 그대로 출력하기](https://www.acmicpc.net/problem/11718)
