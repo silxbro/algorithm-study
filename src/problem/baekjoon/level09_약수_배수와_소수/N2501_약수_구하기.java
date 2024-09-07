@@ -1,9 +1,6 @@
 package src.problem.baekjoon.level09_약수_배수와_소수;
 
 import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 class N2501_약수_구하기 {
 
@@ -12,18 +9,19 @@ class N2501_약수_구하기 {
         int N = scanner.nextInt();
         int K = scanner.nextInt();
 
-        Set<Integer> divisors = new TreeSet<>();
+        System.out.println(find(N, K));
+    }
 
-        for (int i = 1; i * i <= N; i++) {
-            if (N % i == 0) {
-                divisors.add(i);
-                divisors.add(N / i);
+    private static int find(int number, int findOrder) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+                if (count == findOrder) {
+                    return i;
+                }
             }
         }
-        if (K > divisors.size()) {
-            System.out.println(0);
-            return;
-        }
-        System.out.println(divisors.stream().collect(Collectors.toUnmodifiableList()).get(K - 1));
+        return 0;
     }
 }
