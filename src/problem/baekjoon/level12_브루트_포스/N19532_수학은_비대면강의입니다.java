@@ -13,8 +13,9 @@ class N19532_수학은_비대면강의입니다 {
         int e = scanner.nextInt();
         int f = scanner.nextInt();
 
-        int x = (c * e - b * f) / (a * e - b * d);
-        int y = b != 0 ? (c - a * x) / b : (f - d * x) / e;
+        int denominator = a * e - b * d;    // 유일한 해가 존재하므로, 0이 아닌 수
+        int x = (c * e - b * f) / denominator;
+        int y = (a * f - c * d) / denominator;
 
         System.out.println(x + " " + y);
     }
