@@ -9,4 +9,4 @@
 - #### [[11651] 좌표 정렬하기 2](https://www.acmicpc.net/problem/11651)
 - #### [[1181] 단어 정렬](https://www.acmicpc.net/problem/1181)
 - #### [[10814] 나이순 정렬](https://www.acmicpc.net/problem/10814)
-- #### [[18870] 좌표 압축](https://www.acmicpc.net/problem/18870)
+- #### [[18870] 좌표 압축](https://www.acmicpc.net/problem/18870) ★
