@@ -15,7 +15,7 @@ class N1929_소수_구하기 {
         }
         for (int i = 2; i * i <= N; i++) {
             int firstIndex = M / i;
-            if (M % i != 0 || firstIndex == 1) {
+            if (M % i != 0) {
                 firstIndex++;
             }
             for (int j = Math.max(firstIndex, 2); j * i <= N; j++) {
