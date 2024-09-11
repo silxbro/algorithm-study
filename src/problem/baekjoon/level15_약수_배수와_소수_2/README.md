@@ -7,4 +7,4 @@
 - #### [[1929] 소수 구하기](https://www.acmicpc.net/problem/1929) ★
 - #### [[4948] 베르트랑 공준](https://www.acmicpc.net/problem/4948)
 - #### [[17103] 골드바흐 파티션](https://www.acmicpc.net/problem/17103)
-- #### [[13909] 창문 닫기](https://www.acmicpc.net/problem/13909)
+- #### [[13909] 창문 닫기](https://www.acmicpc.net/problem/13909) ★
