@@ -1,0 +1,12 @@
+## 💘 level17 : 스택, 큐, 덱
+- #### [[28278] 스택 2](https://www.acmicpc.net/problem/28278)
+- #### [[10773] 제로](https://www.acmicpc.net/problem/10773)
+- #### [[9012] 괄호](https://www.acmicpc.net/problem/9012)
+- #### [[4949] 균형잡힌 세상](https://www.acmicpc.net/problem/4949)
+- #### [[12789] 도키도키 간식드리미](https://www.acmicpc.net/problem/12789)
+- #### [[18258] 큐 2](https://www.acmicpc.net/problem/18258)
+- #### [[2164] 카드2](https://www.acmicpc.net/problem/2164)
+- #### [[11866] 요세푸스 문제 0](https://www.acmicpc.net/problem/11866)
+- #### [[28279] 덱 2](https://www.acmicpc.net/problem/28279)
+- #### [[2346] 풍선 터뜨리기](https://www.acmicpc.net/problem/2346)
+- #### [[24511] queuestack](https://www.acmicpc.net/problem/24511)
