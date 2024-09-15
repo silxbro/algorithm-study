@@ -9,4 +9,4 @@
 - #### [[11866] 요세푸스 문제 0](https://www.acmicpc.net/problem/11866)
 - #### [[28279] 덱 2](https://www.acmicpc.net/problem/28279)
 - #### [[2346] 풍선 터뜨리기](https://www.acmicpc.net/problem/2346) ★
-- #### [[24511] queuestack](https://www.acmicpc.net/problem/24511)
+- #### [[24511] queuestack](https://www.acmicpc.net/problem/24511) ★
