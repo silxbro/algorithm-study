@@ -35,6 +35,7 @@ class N14889_스타트와_링크 {
         if (numbers.size() == N / 2) {
             int team1 = 0;
             int team2 = 0;
+            // 계산방법 다른 접근 생각해보기
             for (int i = 1; i <= N; i++) {
                 for (int j = 1; j < i; j++) {
                     if (numbers.contains(i) && numbers.contains(j)) {
