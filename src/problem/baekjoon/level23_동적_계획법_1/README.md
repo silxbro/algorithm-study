@@ -1,6 +1,6 @@
 ## 🎳 level23 : 동적 계획법 1
 - #### [[24416] 알고리즘 수업 - 피보나치 수 1](https://www.acmicpc.net/problem/24416)
-- #### [[9184] 신나는 함수 실행](https://www.acmicpc.net/problem/9184)
+- #### [[9184] 신나는 함수 실행](https://www.acmicpc.net/problem/9184) ★
 - #### [[1904] 01타일](https://www.acmicpc.net/problem/1904)
 - #### [[9461] 파도반 수열](https://www.acmicpc.net/problem/9461)
 - #### [[1912] 연속합](https://www.acmicpc.net/problem/1912)
