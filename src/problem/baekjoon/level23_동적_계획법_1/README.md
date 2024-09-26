@@ -3,8 +3,8 @@
 - #### [[9184] 신나는 함수 실행](https://www.acmicpc.net/problem/9184) ★
 - #### [[1904] 01타일](https://www.acmicpc.net/problem/1904)
 - #### [[9461] 파도반 수열](https://www.acmicpc.net/problem/9461)
-- #### [[1912] 연속합](https://www.acmicpc.net/problem/1912)
-- #### [[1149] RGB거리](https://www.acmicpc.net/problem/1149)
+- #### [[1912] 연속합](https://www.acmicpc.net/problem/1912) ★
+- #### [[1149] RGB거리](https://www.acmicpc.net/problem/1149) ★
 - #### [[1932] 정수 삼각형](https://www.acmicpc.net/problem/1932)
 - #### [[2579] 계단 오르기](https://www.acmicpc.net/problem/2579)
 - #### [[1463] 1로 만들기](https://www.acmicpc.net/problem/1463)
