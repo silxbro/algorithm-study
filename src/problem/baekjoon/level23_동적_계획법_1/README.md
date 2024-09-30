@@ -9,7 +9,7 @@
 - #### [[2579] 계단 오르기](https://www.acmicpc.net/problem/2579)
 - #### [[1463] 1로 만들기](https://www.acmicpc.net/problem/1463)
 - #### [[10844] 쉬운 계단 수](https://www.acmicpc.net/problem/10844)
-- #### [[2156] 포도주 시식](https://www.acmicpc.net/problem/2156)
+- #### [[2156] 포도주 시식](https://www.acmicpc.net/problem/2156) ★
 - #### [[11053] 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)
 - #### [[11054] 가장 긴 바이토닉 부분 수열](https://www.acmicpc.net/problem/11054)
 - #### [[2565] 전깃줄](https://www.acmicpc.net/problem/2565)
