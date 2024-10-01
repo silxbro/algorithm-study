@@ -13,5 +13,5 @@
 - #### [[11053] 가장 긴 증가하는 부분 수열](https://www.acmicpc.net/problem/11053)
 - #### [[11054] 가장 긴 바이토닉 부분 수열](https://www.acmicpc.net/problem/11054)
 - #### [[2565] 전깃줄](https://www.acmicpc.net/problem/2565)
-- #### [[9251] LCS](https://www.acmicpc.net/problem/9251)
+- #### [[9251] LCS](https://www.acmicpc.net/problem/9251) ★
 - #### [[12865] 평범한 배낭](https://www.acmicpc.net/problem/12865)
