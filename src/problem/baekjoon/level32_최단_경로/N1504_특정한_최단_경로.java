@@ -12,8 +12,7 @@ import java.util.StringTokenizer;
 class N1504_특정한_최단_경로 {
 
     static List<NodeV>[] graph;
-    static boolean[] visited;
-    static int[] path;
+    static int[] dist;
 
 
     public static void main(String[] args) throws IOException {
@@ -24,6 +23,7 @@ class N1504_특정한_최단_경로 {
         int E = Integer.parseInt(st.nextToken());
 
         graph = new ArrayList[N + 1];
+        dist = new int[N + 1];
         for (int i = 0; i <= N; i++) {
             graph[i] = new ArrayList<>();
         }
@@ -40,50 +40,37 @@ class N1504_특정한_최단_경로 {
         int v1 = Integer.parseInt(st.nextToken());
         int v2 = Integer.parseInt(st.nextToken());
 
-        int path1 = 0;
-        int path2 = 0;
-
-        // 1 -> v1, v2 최단거리
-        visited = new boolean[N + 1];
-        path = new int[N + 1];
-        Arrays.fill(path, Integer.MAX_VALUE);
-        path[1] = 0;
-        bfs(1);
-        path1 += path[v1];
-        path2 += path[v2];
-
-        visited = new boolean[N + 1];
-        path = new int[N + 1];
-        Arrays.fill(path, Integer.MAX_VALUE);
-        path[v1] = 0;
-        bfs(v1);
-        path1 += Math.max(path1, path[v2]) == Integer.MAX_VALUE ? Integer.MAX_VALUE - path1 : path[v2];
-        path2 += Math.max(path2, path[v2]) == Integer.MAX_VALUE ? Integer.MAX_VALUE - path2 : path[v2];
-
-        visited = new boolean[N + 1];
-        path = new int[N + 1];
-        Arrays.fill(path, Integer.MAX_VALUE);
-        path[N] = 0;
-        bfs(N);
-        path1 += Math.max(path1, path[v2]) == Integer.MAX_VALUE ? Integer.MAX_VALUE - path1 : path[v2];
-        path2 += Math.max(path2, path[v1]) == Integer.MAX_VALUE ? Integer.MAX_VALUE - path2 : path[v1];
-
-        int answer = Math.min(path1, path2);
-        System.out.println(answer == Integer.MAX_VALUE ? -1 : answer);
+        System.out.println(Math.min(getPath(1, v1, v2, N), getPath(1, v2, v1, N)));
     }
 
-    private static void bfs(int number) {
-        PriorityQueue<NodeV> pq = new PriorityQueue<>();
-        pq.add(new NodeV(number, path[number]));
-        while (!pq.isEmpty()) {
-            NodeV now = pq.poll();
-            if (!visited[now.vertex]) {
-                visited[now.vertex] = true;
-                for (NodeV next : graph[now.vertex]) {
-                    if (path[next.vertex] > now.distance + next.distance) {
-                        path[next.vertex] = now.distance + next.distance;
-                        pq.add(new NodeV(next.vertex, path[next.vertex]));
-                    }
+    private static int getPath(int s, int m1, int m2, int e) {
+        int minPath = 0;
+        int[] positions = {s, m1, m2, e};
+        for (int i = 0; i < 3; i++) {
+            dijkstra(positions[i]);
+            if (dist[positions[i + 1]] == Integer.MAX_VALUE) {
+                return -1;
+            }
+            minPath += dist[positions[i + 1]];
+        }
+        return minPath;
+    }
+
+    private static void dijkstra(int number) {
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[number] = 0;
+        PriorityQueue<NodeV> queue = new PriorityQueue<>();
+        queue.add(new NodeV(number, 0));
+
+        while (!queue.isEmpty()) {
+            NodeV now = queue.poll();
+            if (dist[now.vertex] < now.distance) {
+                continue;
+            }
+            for (NodeV next : graph[now.vertex]) {
+                if (dist[next.vertex] > now.distance + next.distance) {
+                    dist[next.vertex] = now.distance + next.distance;
+                    queue.add(new NodeV(next.vertex, dist[next.vertex]));
                 }
             }
         }
