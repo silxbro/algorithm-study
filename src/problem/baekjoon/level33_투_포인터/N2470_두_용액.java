@@ -38,7 +38,8 @@ class N2470_두_용액 {
                 e--;
             }
         }
-        System.out.println(queue.peek().getString());
+        Node result = queue.peek();
+        System.out.println(result.value1 + " " + result.value2);
     }
 }
 
@@ -51,11 +52,6 @@ class Node implements Comparable<Node> {
         this.value2 = value2;
     }
 
-    public String getString() {
-        int min = Math.min(value1, value2);
-        int max = Math.max(value1, value2);
-        return min + " " + max;
-    }
     @Override
     public int compareTo(Node o) {
         int myAbs = Math.abs(value1 + value2);
