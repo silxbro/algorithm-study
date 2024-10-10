@@ -3,4 +3,4 @@
 - #### [[2470] 두 용액](https://www.acmicpc.net/problem/2470) ★
 - #### [[1806] 부분합](https://www.acmicpc.net/problem/1806)
 - #### [[1644] 소수의 연속합](https://www.acmicpc.net/problem/1644)
-- #### [[1450] 냅색문제](https://www.acmicpc.net/problem/1450)
+- #### [[1450] 냅색문제](https://www.acmicpc.net/problem/1450) ★
