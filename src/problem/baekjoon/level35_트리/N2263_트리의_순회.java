@@ -35,7 +35,12 @@ class N2263_트리의_순회 {
     }
 
     private static void preOrder(int inS, int inE, int postS, int postE) {
+        if (inS > inE || postS > postE) {
+            return;
+        }
         int root = postOrder[postE];
+        stb.append(root).append(" ");
+
         int rootIndex = 0;
         while (true) {
             if (inOrder[rootIndex] == root) {
@@ -43,13 +48,9 @@ class N2263_트리의_순회 {
             }
             rootIndex++;
         }
-        stb.append(root).append(" ");
 
-        if (rootIndex > inS) {
-            preOrder(inS, rootIndex - 1, postS, postS + (rootIndex - 1 - inS));
-        }
-        if (rootIndex < inE) {
-            preOrder(rootIndex + 1, inE, postS + (rootIndex - inS), postE - 1);
-        }
+
+        preOrder(inS, rootIndex - 1, postS, postS + (rootIndex - 1 - inS));
+        preOrder(rootIndex + 1, inE, postS + (rootIndex - inS), postE - 1);
     }
 }
