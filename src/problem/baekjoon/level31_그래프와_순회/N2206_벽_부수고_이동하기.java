@@ -61,14 +61,6 @@ class N2206_벽_부수고_이동하기 {
                         temp[nextR][nextC] = map[now.row][now.col] + 1;
                         queue.add(new Node(nextR, nextC, temp[nextR][nextC], true));
                     }
-//                    if (!now.broken && (map[nextR][nextC] == 0 || map[nextR][nextC] == 1)) {
-//                        queue.add(new Node(nextR, nextC, map[now.row][now.col] + 1, map[nextR][nextC] == 1));
-//                        map[nextR][nextC] = map[nextR][nextC] == 1 ? -1 : map[now.row][now.col] + 1;
-//                    }
-//                    else if (now.broken && map[nextR][nextC] == 0) {
-//                        map[nextR][nextC] = now.dist + 1;
-//                        queue.add(new Node(nextR, nextC, map[nextR][nextC], true));
-//                    }
                 }
             }
         }
