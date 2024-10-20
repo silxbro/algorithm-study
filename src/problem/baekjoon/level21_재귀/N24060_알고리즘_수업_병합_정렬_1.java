@@ -36,9 +36,6 @@ class N24060_알고리즘_수업_병합_정렬_1 {
             merge_sort(s, m);
             merge_sort(m + 1, e);
             merge(s, m, e);
-            if (count == K) {
-                return;
-            }
         }
     }
 
