@@ -3,6 +3,8 @@ package src.problem.baekjoon.class02_silver;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 class N20922_겹치는_건_싫어 {
@@ -14,30 +16,25 @@ class N20922_겹치는_건_싫어 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[N];
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < N; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
-        }
-
-        int maxLCS = 0;
-        int lastIndex = 0;
+        int maxLen = 0;
         int[] count = new int[100001];
-        int len = 0;
+        Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < N; i++) {
-            if (count[arr[i]] == K) {
-                count = new int[100001];
-                len = 0;
-                i = lastIndex + 1;
+            int num = Integer.parseInt(st.nextToken());
+            if (count[num] == K) {
+                while (true) {
+                    int now = queue.poll();
+                    count[now]--;
+                    if (now == num) {
+                        break;
+                    }
+                }
             }
-            count[arr[i]]++;
-            len++;
-            maxLCS = Math.max(maxLCS, len);
-            if (count[arr[i]] == K) {
-                lastIndex = i;
-            }
+            queue.add(num);
+            count[num]++;
+            maxLen = Math.max(maxLen, queue.size());
         }
-
-        System.out.println(maxLCS);
+        System.out.println(maxLen);
     }
 }
