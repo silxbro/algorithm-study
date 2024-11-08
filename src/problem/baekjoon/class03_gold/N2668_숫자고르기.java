@@ -11,7 +11,6 @@ class N2668_숫자고르기 {
     static int[] arr;
     static boolean[] visited;
     static List<Integer> answer;
-    static boolean right;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -27,37 +26,37 @@ class N2668_숫자고르기 {
 
         for (int i = 1; i <= N; i++) {
             if (!visited[i]) {
-                right = true;
-                dfs(i, i);
+                List<Integer> tempList = new ArrayList<>();
+                if (dfs(i, i, tempList)) {
+                    answer.addAll(tempList);
+                }
             }
         }
 
-        StringBuilder stb = new StringBuilder();
-
         Collections.sort(answer);
+        StringBuilder stb = new StringBuilder();
         stb.append(answer.size()).append("\n");
-        for (int i = 0; i < answer.size(); i++) {
-            stb.append(answer.get(i)).append("\n");
+        for (int num : answer) {
+            stb.append(num).append("\n");
         }
-
         System.out.println(stb);
     }
 
-    private static void dfs(int index, int firstIndex) {
-        visited[index] = true;
-        answer.add(index);
-        if (visited[arr[index]]) {
-            if (arr[index] != firstIndex) {
-                right = false;
-                visited[index] = false;
-                answer.remove(answer.size() - 1);
-            }
-            return;
+    private static boolean dfs(int current, int start, List<Integer> tempList) {
+        if (visited[current]) {
+            return current == start;  // 시작점으로 돌아왔으면 true, 아니면 false
         }
-        dfs(arr[index], firstIndex);
-        if (!right) {
-            visited[index] = false;
-            answer.remove(answer.size() - 1);
+
+        visited[current] = true;
+        tempList.add(current);
+
+        if (dfs(arr[current], start, tempList)) {
+            return true;
         }
+
+        // 돌아온 경로가 올바르지 않은 경우 방문 표시 및 임시 리스트에서 제거
+        visited[current] = false;
+        tempList.remove(tempList.size() - 1);
+        return false;
     }
 }
