@@ -24,10 +24,6 @@ class N13144_List_of_Unique_Numbers {
         int e = 0;
         while (s <= e && e < N) {
             if (visited[arr[e]]) {
-                while (arr[s] != arr[e]) {
-                    visited[arr[s]] = false;
-                    s++;
-                }
                 visited[arr[s]] = false;
                 s++;
             } else {
