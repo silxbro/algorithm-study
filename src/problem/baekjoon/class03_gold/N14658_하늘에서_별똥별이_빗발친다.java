@@ -3,7 +3,6 @@ package src.problem.baekjoon.class03_gold;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 class N14658_하늘에서_별똥별이_빗발친다 {
@@ -18,36 +17,25 @@ class N14658_하늘에서_별똥별이_빗발친다 {
         int K = Integer.parseInt(st.nextToken());
 
         int[][] stars = new int[K][2];
-        int[] rows = new int[K];
-        int[] cols = new int[K];
 
         for (int i = 0; i < K; i++) {
             st = new StringTokenizer(br.readLine());
             stars[i][0] = Integer.parseInt(st.nextToken());
             stars[i][1] = Integer.parseInt(st.nextToken());
-            rows[i] = stars[i][0];
-            cols[i] = stars[i][1];
         }
-
-        Arrays.sort(rows);
-        Arrays.sort(cols);
 
         int maxCount = 0;
         for (int i = 0; i < K; i++) {
             for (int j = 0; j < K; j++) {
-                int row = rows[i];
-                int col = cols[i];
-                int count1 = 0;
-                int count2 = 0;
+                int row = stars[i][0];
+                int col = stars[j][1];
+                int count = 0;
                 for (int k = 0; k < K; k++) {
                     if (stars[k][0] >= row && stars[k][0] <= row + L && stars[k][1] >= col && stars[k][1] <= col + L) {
-                        count1++;
-                    }
-                    if (stars[k][0] <= row && stars[k][0] >= row - L && stars[k][1] <= col && stars[k][1] >= col - L) {
-                        count2++;
+                        count++;
                     }
                 }
-                maxCount = Math.max(maxCount, Math.max(count1, count2));
+                maxCount = Math.max(maxCount, count);
             }
         }
         System.out.println(K - maxCount);
