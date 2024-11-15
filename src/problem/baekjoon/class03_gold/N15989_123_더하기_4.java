@@ -11,13 +11,13 @@ class N15989_123_더하기_4 {
     public static void main(String[] args) throws IOException {
         dp = new long[10001];
 
-        for (int i = 1; i <= 10000; i++) {
-            for (int n = 1; n <= 3; n++) {
-                if (i >= n) {
-                    dp[i] = Math.max(dp[i], dp[i - n] + 1);
-                }
+        dp[0] = 1;
+        for (int n = 1; n <= 3; n++) {
+            for (int i = n; i <= 10000; i++) {
+                dp[i] += dp[i - n];
             }
         }
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder stb = new StringBuilder();
 
