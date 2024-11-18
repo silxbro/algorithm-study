@@ -52,16 +52,12 @@ class N20055_컨베이어_벨트_위의_로봇 {
     }
 
     private static void beltRotate() {
-        int[] newDur = new int[2 * N];
         boolean[] newRobot = new boolean[2 * N];
-        newDur[0] = dur[2 * N - 1];
         newRobot[0] = robot[2 * N - 1];
         for (int i = 0; i < newRobot.length - 1; i++) {
             newRobot[i + 1] = robot[i];
-            newDur[i + 1] = dur[i];
         }
         robot = newRobot;
-        dur = newDur;
         if (robot[N - 1]) {
             robot[N - 1] = false;
             robot[N] = true;
@@ -72,6 +68,7 @@ class N20055_컨베이어_벨트_위의_로봇 {
 
     private static void robotMove() {
         robot[2 * N - 1] = false;
+        move(N - 1, N);
         for (int i = 2 * N - 2; i >= 0; i--) {
             move(i, i + 1);
         }
